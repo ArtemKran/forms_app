@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Добавление комментариев</title>
+    <link href="media/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form action="/del_comment" class="form" method="post" name="form">
+	     	<input type="text" class="textbox" name="surname" placeholder="Фамилия"
+                autofocus required pattern="^[а-яА-ЯёЁa-zA-Z]+$" title="Только латинские или кириллические символы">
+            <input type="text" class="textbox" name="nameF" placeholder="Имя" autofocus
+                required pattern="^[а-яА-ЯёЁa-zA-Z]+$" title="Только латинские или кириллические символы">
+            <input type="text" class="textbox" placeholder="Отчество" name="middle_name" autofocus
+                required pattern="^[а-яА-ЯёЁa-zA-Z]+$" title="Только латинские или кириллические символы">
+            <select class="textbox" id="region" name="region">
+                <option id="firstRegion"></option>
+                <option id="secondRegion"></option>
+                <option id="thirdRegion"></option>
+            </select>
+            <select class="textbox" id="city" name="city">
+                <option id="firstCity"></option>
+                <option id="secondCity"></option>
+                <option id="thirdCity"></option>
+            </select>
+            <input type="tel" class="textbox" name="phone" maxlength="11" placeholder="+79261234567"  autofocus required
+                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" title="Например: +79261234567">
+            <input type="email" class="textbox" name="email" placeholder="Email" autofocus required>
+            <textarea rows="4" cols="50" name="comment" placeholder="Комментарии писать сюда" class="message" required>
+            </textarea>
+            <input type="hidden" name="idVal">
+            <input name="submit" class="button" type="submit" value="Удалить" />
+        </form>
+
+    </div>
+    <script src="media/comment.js"></script>
+    <script src="media/del_comment.js"></script>
+</body>
+</html>
